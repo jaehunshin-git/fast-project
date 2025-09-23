@@ -1,0 +1,79 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg-primary: #0a0a0a;
+  --bg-elevated: #101010;
+  --fg-primary: #ffffff;
+  --fg-muted: #a1a1aa;
+  --border-subtle: rgba(255, 255, 255, 0.08);
+  --accent-primary: #38bdf8;
+  --accent-muted: rgba(56, 189, 248, 0.18);
+  --accent-ring: rgba(56, 189, 248, 0.35);
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --bg-primary: #ffffff;
+    --bg-elevated: #f8fafc;
+    --fg-primary: #0f172a;
+    --fg-muted: #475569;
+    --border-subtle: rgba(15, 23, 42, 0.08);
+    --accent-primary: #0ea5e9;
+    --accent-muted: rgba(14, 165, 233, 0.12);
+    --accent-ring: rgba(14, 165, 233, 0.35);
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: var(--font-inter), system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: radial-gradient(120% 120% at 50% 0%, rgba(56, 189, 248, 0.08), transparent 60%), var(--bg-primary);
+  color: var(--fg-primary);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:focus {
+  outline: 2px solid var(--accent-ring);
+  outline-offset: 4px;
+}
+
+::selection {
+  background-color: var(--accent-muted);
+  color: var(--fg-primary);
+}
+
+@layer base {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-space-grotesk), var(--font-inter), "Segoe UI", sans-serif;
+    color: var(--fg-primary);
+    letter-spacing: -0.01em;
+  }
+
+  p {
+    color: var(--fg-muted);
+  }
+}
