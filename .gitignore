@@ -24,8 +24,7 @@ yarn-debug.log*
 yarn-error.log*
 
 # Local env files
-.env*.local
-.env
+# .env*.local
 
 # Vercel
 .vercel
@@ -49,9 +48,9 @@ __pycache__/
 *$py.class
 *.so
 .Python
-env/
 venv/
 .venv/
-ENV/
-env.bak/
 venv.bak/
+
+
+.env.local
